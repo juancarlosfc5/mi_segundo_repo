@@ -256,7 +256,7 @@ FinAlgoritmo
 4. 
 
 ```pseudocode
-
+ALGORITMO
 ```
 
 5. 
