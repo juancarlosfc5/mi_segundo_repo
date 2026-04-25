@@ -256,7 +256,48 @@ FinAlgoritmo
 4. 
 
 ```pseudocode
-ALGORITMO
+Funcion admitido <- PuedeSubir(edad, estatura)
+	Definir admitido Como Logico	
+	
+	Si edad >= 12 Y estatura >= 1.50 Entonces
+		admitido <- Verdadero
+	SiNo
+		admitido <- Falso
+	Fin Si
+	
+Fin Funcion
+
+Algoritmo parque_diversiones
+	Definir edades, admitidos, rechazados Como Entero
+	Definir estaturas Como Real
+	
+	admitidos <- 0
+	rechazados <- 0
+	
+	Escribir "Bienvenido al programa para verificar el acceso al parque de diversiones"
+	Repetir
+		Escribir "Ingrese la edad de la persona: "
+		Leer edades
+		
+		Si edades <> 0 Entonces
+			Escribir "Ingrese la estatura de la persona (m): "
+			Leer estaturas
+			
+			Si PuedeSubir(edades, estaturas) Entonces
+				Escribir "Puede subir"
+				admitidos <- admitidos + 1
+			SiNo
+				Escribir "No puede subir"
+				rechazados <- rechazados + 1
+			Fin Si
+		Fin Si
+		
+	Hasta Que edades = 0
+	
+	Escribir "El total de personas admitidas es: ", admitidos
+	Escribir "El total de personas rechazadas es: ", rechazados
+	
+FinAlgoritmo
 ```
 
 5. 
